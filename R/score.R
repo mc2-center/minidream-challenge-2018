@@ -28,7 +28,8 @@ compute_scores <- function(submission_path) {
   module_name = filename_split[2]
   module_no = module_map[module_name]
   username = filename_split[1]
-  eval_path = file.path(root_dir, glue::glue('modules/module{module_no}/.eval/eval_fxn.R'))
+  # Path on docker container
+  eval_path = glue::glue('/modules/module{module_no}/.eval/eval_fxn.R')
   source(eval_path)
   # TODO: add in module 6 later
   # if moduleNo == 6:

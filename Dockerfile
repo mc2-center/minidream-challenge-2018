@@ -7,4 +7,4 @@ WORKDIR /
 COPY R/score.R .
 COPY modules .
 COPY data .
-
+COPY minidream-challenge-2018.Rproj .
